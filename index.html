@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-eqiuv="X-UA-Compatible" content="ie=edge" />
+    <title>Vite App</title>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+
+      html, body{
+        height: 100vh;
+        font-family: 'Poppins';
+        background: rgb(27, 27, 31);
+      }
+
+      canvas{
+        width: 100%;
+        height: 100%
+      }
+
+      .webgl{
+        position: fixed;
+        top: 0;
+        right: 0;
+        outline: none;
+      }
+
+      .container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        color: #fff;
+        margin: 16em 8em;
+      }
+
+      h1{
+        font-size: 4rem;
+      }
+
+      p{
+        font-size: 1.3 rem;
+        width: 55%;
+        color: rgb(107, 107, 122);
+      }
+
+      button {
+        font-size: 1.3 rem;
+        padding: .5em 1em;
+        margin-top: 3em;
+        background-color: rgb(0, 114, 255);
+        border: none;
+        color: #fff;
+        font-weight: bold;
+        text-transform: uppercase;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class ="container">
+      <h1> Journey to wherever</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis voluptatum nostrum quae quia eum molestias nesciunt ipsa deleniti tempore, nam laborum explicabo mollitia dignissimos reiciendis! Culpa, maiores officia? </p>
+      <button>Let's Go</button>
+    </div>
+    <canvas class="webgl"></canvas>
+    <div id="app"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
