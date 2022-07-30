@@ -23,7 +23,7 @@ const canvas = document.querySelector('canvas.webgl');
 const scene = new THREE.Scene();
 
 // Objects
-const geometry = new THREE.PlaneBufferGeometry( 3, 3, 64, 64 );
+const geometry = new THREE.PlaneBufferGeometry( 4, 4, 100, 100 );
 
 // Materials
 const material = new THREE.MeshStandardMaterial({
@@ -41,8 +41,10 @@ const material = new THREE.MeshStandardMaterial({
 
 
 const plane = new THREE.Mesh(geometry,material);
+
 scene.add(plane);
 plane.rotation.x = 181;
+plane.position.x = 0.9;
 
 gui.add(plane.rotation,'x').min(0).max(600);
 
@@ -58,7 +60,7 @@ scene.add(pointLight);
 gui.add(pointLight.position,'x').min(0).max(600);
 gui.add(pointLight.position,'y').min(0).max(600);
 gui.add(pointLight.position,'z').min(0).max(600);
-
+gui.close();
 const col = { color: '#00ff00'};
 gui.addColor(col, 'color').onChange(() => {
   pointLight.color.set(col.color);
@@ -76,7 +78,7 @@ const sizes = {
 window.addEventListener('resize', () =>
 {
     // Update sizes
-    sizes.width = window.innerWidth * .5
+    sizes.width = window.innerWidth * 0.7
     sizes.height = window.innerHeight
 
     // Update camera
